@@ -40,6 +40,9 @@ def is_prime_number(number: int) -> bool:
 
 
 def is_armstrong(number: int) -> bool:
+    if number < 0:
+        return False
+        
     num_str = str(number)
     power = len(num_str)
     
@@ -68,6 +71,7 @@ def validate_number_query(number:str):
         )
     
     number = int(number)
+    print("validation done")
 
     return number
 
