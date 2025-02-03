@@ -71,7 +71,6 @@ def validate_number_query(number:str):
         )
     
     number = int(number)
-    print("validation done")
 
     return number
 

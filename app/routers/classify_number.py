@@ -30,8 +30,6 @@ async def classify_number(number:str = None):
         return validated_result
 
     validated_number = validated_result
-    
-    return {"validated": True, "number": validated_number}
 
     is_armstrong_num = is_armstrong(validated_number)
     is_even_parity = validated_number % 2 == 0
