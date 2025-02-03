@@ -23,9 +23,9 @@ This is a FastAPI-based project that provides an API endpoint to classify number
 
 ## Screenshots
 
-![Screenshot of the Swagger API docs]()
+![Screenshot of the Swagger API docs](https://raw.githubusercontent.com/remioluwatomi/numclassify/refs/heads/main/app/assets/Screenshot%202025-02-03%20041428.png)
 
-![Screenshot of the Swagger API docs]()
+![Screenshot of the Swagger API docs](https://raw.githubusercontent.com/remioluwatomi/numclassify/refs/heads/main/app/assets/Screenshot%202025-02-03%20041445.png)
 
 ---
 
@@ -112,6 +112,13 @@ status_code: 400, BadRequest
 ```
 
 ---
+
+## Error Handling 🚨
+
+The API includes error handling for:
+
+- Invalid value for number query
+- Missing value for number query
 
 ## Disclaimer:
 
