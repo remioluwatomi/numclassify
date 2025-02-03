@@ -30,6 +30,8 @@ async def classify_number(number:str = None):
         return validated_result
 
     validated_number = validated_result
+    
+    return {"validated": True, "number": validated_number"}
 
     is_armstrong_num = is_armstrong(validated_number)
     is_even_parity = validated_number % 2 == 0
@@ -39,9 +41,11 @@ async def classify_number(number:str = None):
         properties.insert(0, "armstrong")
     properties.append("even" if is_even_parity else "odd")
     
+    digit_is_negative = number.startswith('-')
     digit_sum = sum(int(i) for i in number.lstrip('-'))  
-    if number.startswith('-'):  
-        digit_sum = -digit_sum  
+    if digit_is_negative:  
+        digit_sum = -digit_sum
+        
 
     fun_fact = await get_numbers_fact(validated_number)
     is_perfect = is_perfect_number(validated_number)
