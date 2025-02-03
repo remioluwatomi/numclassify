@@ -70,7 +70,7 @@ This is a FastAPI-based project that provides an API endpoint to classify number
    The API will be available at:
 
    ```bash
-   http://127.0.0.1:8000/number-classify
+   http://127.0.0.1:8000/api/number-classify
    ```
 
    ```bash
@@ -82,7 +82,7 @@ This is a FastAPI-based project that provides an API endpoint to classify number
 
 ## Endpoints
 
-### `GET /classify-number?number={int}`
+### `GET /api/classify-number?number={int}`
 
 Accepts GET request with a number query and returns JSON response.
 
