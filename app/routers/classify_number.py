@@ -20,7 +20,7 @@ class SuccessResponse(BaseModel):
 
 router = APIRouter()
 
-@router.get("api/classify-number/", tags=["classify-number"], response_model=SuccessResponse, responses={400:{"model": CustomValidationError, "description": "Bad Request"}} )
+@router.get("/api/classify-number/", tags=["classify-number"], response_model=SuccessResponse, responses={400:{"model": CustomValidationError, "description": "Bad Request"}} )
 async def classify_number(number:str = None):
 
     #using str and not int due to hng requirement for custom validation 
