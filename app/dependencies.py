@@ -71,7 +71,7 @@ def validate_number_query(number:str):
     if number < 0:
         return JSONResponse(
             content= {
-                "number": "NEGATIVE",
+                "number": "negative",
                 "error": True
             },
             status_code=status.HTTP_400_BAD_REQUEST,

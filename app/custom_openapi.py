@@ -6,7 +6,7 @@ def custom_openapi(app):
 
     openapi_schema = get_openapi(
         title="Number Classification API",
-        description="This is a sample API for classifying numbers.",
+        description="This is a FastAPI-based project that provides an API endpoint to classify numbers based on their mathematical properties. The API checks if a number is prime, perfect, even, odd, or an Armstrong number, and also provides additional information like the digit sum and a fun fact about the number",
         version="1.0.0",
         routes=app.routes
     )
