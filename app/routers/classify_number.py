@@ -39,7 +39,10 @@ async def classify_number(number:str = None):
         properties.insert(0, "armstrong")
     properties.append("even" if is_even_parity else "odd")
     
-    digit_sum = sum(int(i) for i in number)
+    digit_sum = sum(int(i) for i in number.lstrip('-'))  
+    if number.startswith('-'):  
+        digit_sum = -digit_sum  
+
     fun_fact = await get_numbers_fact(validated_number)
     is_perfect = is_perfect_number(validated_number)
     is_prime = is_prime_number(validated_number)
