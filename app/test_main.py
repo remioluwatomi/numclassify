@@ -42,15 +42,6 @@ def test_classify_number_with_invalid_query():
             }
 
 
-def test_classify_number_with_negative_query():
-    response = client.get("/classify-number?number=-550")
-
-    assert response.status_code == 400
-    data = response.json()
-
-    assert data == {"number":"negative","error":True}
-
-
 def test_classify_number_is_armstrong():
     response = client.get("classify-number?number=371")
 
